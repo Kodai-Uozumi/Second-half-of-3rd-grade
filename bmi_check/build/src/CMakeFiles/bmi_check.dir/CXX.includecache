@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/bmi_check.h
+
+/media/sf_share/bmi_check/src/bmi_check.cpp
+bmi_check.h
+/media/sf_share/bmi_check/src/bmi_check.h
+

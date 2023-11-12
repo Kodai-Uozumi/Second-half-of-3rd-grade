@@ -1,0 +1,11 @@
+/media/sf_share/blackjack/build/CMakeFiles/rebuild_cache.dir
+/media/sf_share/blackjack/build/CMakeFiles/edit_cache.dir
+/media/sf_share/blackjack/build/CMakeFiles/test.dir
+/media/sf_share/blackjack/build/src/CMakeFiles/rebuild_cache.dir
+/media/sf_share/blackjack/build/src/CMakeFiles/edit_cache.dir
+/media/sf_share/blackjack/build/src/CMakeFiles/test.dir
+/media/sf_share/blackjack/build/src/CMakeFiles/judge.dir
+/media/sf_share/blackjack/build/tests/CMakeFiles/rebuild_cache.dir
+/media/sf_share/blackjack/build/tests/CMakeFiles/edit_cache.dir
+/media/sf_share/blackjack/build/tests/CMakeFiles/test.dir
+/media/sf_share/blackjack/build/tests/CMakeFiles/judge_test.out.dir

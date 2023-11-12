@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++-9  -g   CMakeFiles/bmi_check_test.out.dir/bmi_check_test.cpp.o CMakeFiles/bmi_check_test.out.dir/main.cpp.o  -o bmi_check_test.out  ../src/libbmi_check.a 

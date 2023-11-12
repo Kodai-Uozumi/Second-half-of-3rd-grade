@@ -1,0 +1,67 @@
+$ gcc -Wall -pedantic -o ad4-1 ad4-1.c
+$ ./ad4-1
+ e677ff00 e677ff04 e677ff08 e677ff0c e677ff10 e677ff14 e677ff18 e677ff1c
+ e677ff20 e677ff24 e677ff28 e677ff2c e677ff30 e677ff34 e677ff38 e677ff3c
+ 6 18 12 21 7 19 14 37
+ e677fdf0 e677fdf4 e677fdf8 e677fdfc
+ e677fdd0 e677fdd4 e677fdd8 e677fddc
+ e677fdb0 e677fdb4 e677fdb8 e677fdbc
+ e677fd90 e677fd94 e677fd98 e677fd9c
+ e677fc90 e677fc94
+ e677fc80 e677fc84
+ e677fc70 e677fc74
+ e677fc60 e677fc64
+ e677fb60
+ e677fb50
+ e677fb40
+ e677fb30
+
+ e677fa20
+
+ e677fa00
+
+ e677fa20
+
+ e677fa00
+ e677fb60
+ e677fb50
+ e677fb40
+ e677fb30
+
+ e677fa20
+
+ e677fa00
+
+ e677fa20
+
+ e677fa00
+ e677fc90 e677fc94
+ e677fc80 e677fc84
+ e677fc70 e677fc74
+ e677fc60 e677fc64
+ e677fb60
+ e677fb50
+ e677fb40
+ e677fb30
+
+ e677fa20
+
+ e677fa00
+
+ e677fa20
+
+ e677fa00
+ e677fb60
+ e677fb50
+ e677fb40
+ e677fb30
+
+ e677fa20
+
+ e677fa00
+
+ e677fa20
+
+ e677fa00
+ 6 7 12 14 18 19 21 37
+cnt=17 : Tw(8)=17

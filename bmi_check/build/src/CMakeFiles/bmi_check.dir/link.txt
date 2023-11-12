@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbmi_check.a  CMakeFiles/bmi_check.dir/bmi_check.cpp.o
+/usr/bin/ranlib libbmi_check.a

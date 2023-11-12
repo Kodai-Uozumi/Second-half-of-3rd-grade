@@ -1,0 +1,74 @@
+/*** server.c ***/
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#define PORT 8888 /* ポート番号 */
+int main(int argc, char* argv[]){
+struct sockaddr_in server; /*サーバの情報を格納する構造体*/
+struct sockaddr_in client; /*クライアントの情報を格納する構造体*/
+int s_wait; /* クライアントからの接続要求を待つためのソケット */
+int s; /* クライアントと通信するためのソケット */
+unsigned char* client_addr; int client_len; char buf[128];
+/* (1)ソケット生成 */
+s_wait = socket(AF_INET, SOCK_STREAM, 0);
+/* (2)アドレス割当て */
+bzero((char *)&server, sizeof(server)); /* 初期化 */
+server.sin_addr.s_addr = htonl(INADDR_ANY); /*クライアント*/
+server.sin_family = AF_INET; /* ドメイン */
+server.sin_port = PORT; /* ポート番号 */
+bind(s_wait, (struct sockaddr*)&server, sizeof(server));
+/* (3)ソケットをサーバに設定 */
+listen(s_wait, 5);
+/* (4)コネクション確立待ち */
+client_len = sizeof(client);
+s = accept(s_wait, (struct sockaddr*)&client, &client_len);
+close(s_wait); /* 接続要求待ちソケットは不要なので閉じる */
+client_addr = (unsigned char*)&(client.sin_addr.s_addr);
+printf("connected to %d.%d.%d.%d.\n",client_addr[0],
+client_addr[1],client_addr[2],client_addr[3]);
+/* (5)データ送信 */
+sprintf(buf,"Hello, %d.%d.%d.%d!\n",client_addr[0],
+client_addr[1],client_addr[2],client_addr[3]);
+write(s, buf, strlen(buf));
+/* (6)ソケット解放 */
+close(s);
+}
+
+/*** client.c ***/
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#define PORT 8888 /* ポート番号 */
+int main(int argc, char* argv[]){
+int ip[4]; /* サーバのIPアドレスを格納する配列 */
+struct sockaddr_in server;/*サーバの情報を格納する構造体*/
+int s; /* ソケットディスクリプタ */
+int len; /* サーバから受信したデータのバイト数 */
+char buf[512]; /* 〃 データを格納する配列 */
+/* (1)ソケットの生成 */
+s = socket(AF_INET, SOCK_STREAM, 0);
+/* (5)コネクション確立要求 */
+/* 起動時にユーザが指定したサーバのIPアドレスを配列ipに格納する */
+sscanf(argv[1], "%d.%d.%d.%d",
+&ip[0],&ip[1],&ip[2],&ip[3]);
+/* サーバに関する情報をserverという構造体にセットする */
+bzero((char *)&server, sizeof(server)); /* 初期化 */
+sprintf((char*)&server.sin_addr.s_addr,
+"%c%c%c%c", ip[0], ip[1], ip[2], ip[3]);
+server.sin_family = AF_INET; /* ドメイン */
+server.sin_port = PORT; /* ポート番号 */
+connect(s, (struct sockaddr*)&server, sizeof(server));
+/* (6)データの送受信 */
+len = read(s, buf, sizeof(buf));
+write(1, buf, len);
+/* (7)ソケットの解放 */
+close(s);
+}

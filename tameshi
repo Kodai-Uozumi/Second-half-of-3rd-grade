@@ -1,0 +1,4 @@
+$ gcc -Wall -pedantic -o tamesi tamesi.c
+$ ./tamesi
+1680
+1680=2^4*3*5*7

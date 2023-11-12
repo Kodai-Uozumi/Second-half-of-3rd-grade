@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/media/sf_share/blackjack/build/src",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-9   -I/media/sf_share/blackjack/include  -g   \"-o0 -g\" -o CMakeFiles/judge.dir/judge.cpp.o -c /media/sf_share/blackjack/src/judge.cpp",
+  "file": "/media/sf_share/blackjack/src/judge.cpp"
+},
+{
+  "directory": "/media/sf_share/blackjack/build/tests",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-9   -I/media/sf_share/blackjack/include  -g   \"-o0 -g\" -o CMakeFiles/judge_test.out.dir/judge_test.cpp.o -c /media/sf_share/blackjack/tests/judge_test.cpp",
+  "file": "/media/sf_share/blackjack/tests/judge_test.cpp"
+},
+{
+  "directory": "/media/sf_share/blackjack/build/tests",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-9   -I/media/sf_share/blackjack/include  -g   \"-o0 -g\" -o CMakeFiles/judge_test.out.dir/main.cpp.o -c /media/sf_share/blackjack/tests/main.cpp",
+  "file": "/media/sf_share/blackjack/tests/main.cpp"
+}
+]

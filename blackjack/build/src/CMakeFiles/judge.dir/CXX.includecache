@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/judge.h
+
+/media/sf_share/blackjack/src/judge.cpp
+stddef.h
+-
+assert.h
+-
+judge.h
+/media/sf_share/blackjack/src/judge.h
+

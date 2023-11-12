@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <png.h>
+#include "imageProc.c"
+int main( int argc, char **argv )
+{
+ Image img1, img2, img3, img4, img5;
+ ImageF mask;
+ Size s, m;
+ readPNG( &img1, "Cat.png" );
+ s.x = img1.s.x;
+ s.y = img1.s.y;
+ 
+ imageAlloc( s, &img2 );
+ median( &img1, 3, &img2 );
+ imageAlloc( s, &img3 );
+ m.x = 3;
+ m.y = 3;
+ imageAllocF( m, &mask );
+ mask.val[0][0] = (float)1/9; mask.val[1][0] = (float)1/9; mask.val[2][0] = (float)1/9;
+ mask.val[0][1] = (float)1/9; mask.val[1][1] = (float)1/9; mask.val[2][1] = (float)1/9;
+ mask.val[0][2] = (float)1/9; mask.val[1][2] = (float)1/9; mask.val[2][2] = (float)1/9;
+ filtering( &img2, &mask, &img3 );
+ imageAlloc( s, &img4 );
+ binalization( &img3, 128, &img4 );
+ imageAlloc( s, &img5 );
+ multi( &img4, 255.0, &img5 );
+ writePNG( &img5, "cat-bin.png");
+ return(0);
+}

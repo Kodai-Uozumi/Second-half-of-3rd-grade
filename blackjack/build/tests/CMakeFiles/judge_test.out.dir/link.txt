@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++-9  -g   CMakeFiles/judge_test.out.dir/judge_test.cpp.o CMakeFiles/judge_test.out.dir/main.cpp.o  -o judge_test.out  ../src/libjudge.a 

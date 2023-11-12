@@ -1,0 +1,12 @@
+/media/sf_share/bmi_check/build/CMakeFiles/rebuild_cache.dir
+/media/sf_share/bmi_check/build/CMakeFiles/edit_cache.dir
+/media/sf_share/bmi_check/build/CMakeFiles/test.dir
+/media/sf_share/bmi_check/build/CMakeFiles/bmi_checker.out.dir
+/media/sf_share/bmi_check/build/src/CMakeFiles/rebuild_cache.dir
+/media/sf_share/bmi_check/build/src/CMakeFiles/edit_cache.dir
+/media/sf_share/bmi_check/build/src/CMakeFiles/test.dir
+/media/sf_share/bmi_check/build/src/CMakeFiles/bmi_check.dir
+/media/sf_share/bmi_check/build/tests/CMakeFiles/edit_cache.dir
+/media/sf_share/bmi_check/build/tests/CMakeFiles/test.dir
+/media/sf_share/bmi_check/build/tests/CMakeFiles/rebuild_cache.dir
+/media/sf_share/bmi_check/build/tests/CMakeFiles/bmi_check_test.out.dir

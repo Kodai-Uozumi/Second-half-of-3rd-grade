@@ -1,0 +1,2 @@
+/usr/bin/ar qc libjudge.a  CMakeFiles/judge.dir/judge.cpp.o
+/usr/bin/ranlib libjudge.a
